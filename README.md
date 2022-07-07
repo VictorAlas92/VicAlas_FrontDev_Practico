@@ -3,8 +3,8 @@ Un repositorio para el [curso de Frontend Developer Practico ](https://platzi.co
 > - VictorAlas
 
 ## Recursos del curso 
-* 
-* 
+* Aqui podemos importar o buscar fuentes de letra [Google Fonts](https://fonts.google.com/)
+* aqui tenemos una guia para tener un mejor dise;o en todos los proyectos [polaris] (https://polaris.shopify.com/)
 * 
 * 
 * 
