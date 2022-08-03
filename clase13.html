@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>My order</title>
+    <style>
+      :root {
+        --white: #ffffff;
+        --black: #000000;
+        --very-light-pink: #c7c7c7;
+        --text-input-field: #f7f7f7;
+        --hospital-green: #acd9b2;
+        --sm: 14px;
+        --md: 16px;
+        --lg: 18px;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Quicksand", sans-serif;
+      }
+      
+      .product-detail {
+            width: 360px;
+            padding: 24px;
+            position: absolute;
+            box-sizing: border-box;
+            right: 0;
+      }
+      
+      .product-detail_cabecera{
+        display: flex;
+      }
+      .product-detail_flecha{
+        transform: rotate(180deg);
+        margin-right: 14px;
+       }
+      .product-detail__title {
+        font-size: var(--lg);
+        font-weight: bold;
+      }
+      .shipping-card {
+        display: flex;
+        flex-direction: column;
+        gap: 26px;
+      }
+      .cards-container__product-card {
+        display: grid;
+        grid-template-columns: auto 1fr auto auto;
+        align-items: center;
+      }
+      .cards-container__product-img {
+        border-radius: 20px;
+        height: 74px;
+        width: 74px;
+        object-fit: cover;
+      }
+      .cards-container__description {
+        font-size: var(--sm);
+        color: var(--very-light-pink);
+        margin: 0 0 0 18px; 
+      }
+      .cards-container__precio {
+        font-size: var(--md);
+        font-weight: bold;
+      }
+      .cards-container__product-delete{
+        margin-left: 12px;
+      }
+      .product-detail-conteiner__total {
+        background-color: var(--text-input-field);
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 22px;
+        margin-bottom: 22px;
+        height: 52px;
+      }
+      .product-detail-conteiner__total p span:first-child {
+        margin-left: 20px;
+        margin-right: 20px;
+        font-weight: bold;
+      }
+    .primary-button {
+            background-color: var(--hospital-green);
+            border-radius: 8px;
+            border: none;
+            color: var(--white);
+            height: 50px;
+            width: 100%;
+            cursor: pointer;
+            font-size: var(--md);
+            font-weight: bold;
+        }
+      @media (max-width: 640px) {
+        .product-detail {
+            width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+      <aside class="product-detail">
+        <div class="product-detail_cabecera">
+            <img src="./icons/flechita.svg" alt="flecha" class="product-detail_flecha">
+            <h1 class="product-detail__title">My order</h1>
+        </div>
+        <div class="shipping-card">
+            <div class="cards-container__product-card">
+              <img class="cards-container__product-img"
+              src="https://images.pexels.com/photos/5913315/pexels-photo-5913315.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt="producto"/>
+              <p class="cards-container__description">Marshmallow</p>
+              <p class="cards-container__precio">$120,00</p>
+              <img class="cards-container__product-delete" src="./icons/icon_close.png" alt="delete-producto"/>
+            </div>
+          <div class="cards-container__product-card">
+            <img
+              class="cards-container__product-img"
+              src="https://images.pexels.com/photos/6607429/pexels-photo-6607429.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt="producto"
+            />
+            <p class="cards-container__description">Apple pai</p>
+            <p class="cards-container__precio">$120,00</p>
+            <img class="cards-container__product-delete" src="./icons/icon_close.png" alt="delete-producto"/>
+          </div>
+          <div class="cards-container__product-card">
+            <img
+              class="cards-container__product-img"
+              src="https://images.pexels.com/photos/4110003/pexels-photo-4110003.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt="producto"
+            />
+            <p class="cards-container__description">ChocoCake</p>
+            <p class="cards-container__precio">$120,00</p>
+            <img class="cards-container__product-delete" src="./icons/icon_close.png" alt="delete-producto"/>
+          </div>
+        </div>
+        <div class="product-detail-conteiner__total">
+          <p>
+            <span>Total</span>
+          </p>
+          <p>
+            <span>$560.00</span>
+          </p>
+        </div>
+        <button class="primary-button add-to-cart-button">Checkout</button>
+      </aside>
+  </body>
+</html>
